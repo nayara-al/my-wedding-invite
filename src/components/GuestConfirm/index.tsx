@@ -6,20 +6,21 @@ const GuestConfirm = () => {
   const [nome, setNome] = useState<string>("");
   const [email, setEmail] = useState<string>("");
 
-  /* async function handleSubmit(event: React.SyntheticEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.SyntheticEvent<HTMLFormElement>) {
     event.preventDefault()
+    localStorage.setItem("Nome", nome)
     await fetch("/api/thanks-confirm", {
       method: "POST",
       body: JSON.stringify({
-        nome: nome,
+        firstName: nome,
         email: email
       })
     });
-  } */
+  }
 
   return (
     <div className="w-full items-center justify-center">
-      <form /* onSubmit={handleSubmit} */>
+      <form onSubmit={handleSubmit} >
         <InputText
           id="nome"
           label="Nome"
@@ -35,7 +36,7 @@ const GuestConfirm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <button type="submit">Confirmar presença</button>
+        <button type="submit" className="bg-primary p-2 rounded-sm">Confirmar presença</button>
       </form>
     </div>
   );

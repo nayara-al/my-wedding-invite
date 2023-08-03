@@ -12,7 +12,7 @@ export function InputText ({ label, error, id, ...rest }: InputTextProps) {
             <label className="ml-1" htmlFor={id}>
                 {label}
             </label>
-            <input className="mb-[16px] rounded-md" id={id} {...rest}/>
+            <input className="mb-[16px] rounded-md text-black" id={id} {...rest}/>
         </div>
     )
 }
