@@ -1,4 +1,3 @@
-import GuestConfirm from "@/components/GuestConfirm";
 import { NavBar } from "@/components/NavBar";
 import { PageTitle } from "@/components/PageTitle";
 import { Scrap } from "@/components/Scrap";

@@ -25,6 +25,12 @@ export const NavBar = () => {
         {showText && <p>Menu</p>}
       </header>
       <ul className="flex flex-col gap-4 px-2">
+      <Link href={"/"}>
+          <li className="flex gap-6 py-2">
+            <Image src={story} alt="ícone de lápis para escrita" />
+            {showText && <p className="font-poppins self-center">Nossa história</p>}
+          </li>
+        </Link>
         <Link href={"/nossa-historia"}>
           <li className="flex gap-6 py-2">
             <Image src={story} alt="ícone de lápis para escrita" />
