@@ -31,6 +31,14 @@ module.exports = {
         pressStart2P: ['var(--font-pressStart2P)'],
       }
     },
+    screens: {
+      cp: '460px', //cp = cellphone - configuração personalizada
+      sm: '640px',
+      md: '768px',
+      lg: '864px',
+      xl: '1024px',
+      xw: '1280px' // xw = maX width - configuração personalizada
+    }
   },
   plugins: [],
 }
