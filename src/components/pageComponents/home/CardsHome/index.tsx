@@ -7,7 +7,7 @@ import NV1 from "../../../../../public/nv1.jpeg"
 
 export default function CardHome() {
   const onEnter = ({ currentTarget }: React.MouseEvent): void => {
-    gsap.to(currentTarget, { scale: 1.2, margin: 32, cursor: "pointer" });
+    gsap.to(currentTarget, { scale: 1.2, margin: 24, cursor: "pointer" });
   };
 
   const onLeave = ({ currentTarget }: React.MouseEvent) => {
