@@ -1,10 +1,10 @@
-import GuestConfirm from '@/components/GuestConfirm'
-import React from 'react'
+import GuestConfirm from "@/components/common/GuestConfirm";
+import React from "react";
 
 export default function Confirm() {
   return (
     <div>
-        <GuestConfirm />
+      <GuestConfirm />
     </div>
-  )
+  );
 }
