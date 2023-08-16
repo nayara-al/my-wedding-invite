@@ -14,24 +14,24 @@ export const NavBar = () => {
       if (window.innerWidth >= 864) {
         setChangeMenu(true);
       } else {
-        setChangeMenu(false)
+        setChangeMenu(false);
         setShowText(false);
       }
     };
 
     handleResize();
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
-  },[])
-  const [changeMenu, setChangeMenu] = useState(true)
+  }, []);
+  const [changeMenu, setChangeMenu] = useState(true);
   const [showText, setShowText] = useState(true);
 
   const toggleText = () => {
     if (changeMenu) setShowText((prevShowText) => !prevShowText);
-    else setShowText(false)
+    else setShowText(false);
   };
   const width = showText ? "75" : "30";
 
@@ -41,16 +41,24 @@ export const NavBar = () => {
         onClick={toggleText}
         className="bg-secondGreen flex items-center gap-12 px-4 h-12"
       >
-        <Image src={menu} alt="menu hamburguer" width={32} height={32} className="hover:cursor-pointer" />
-        {showText && <p className="hover:cursor-pointer font-gwendolyn text-[2rem]">Menu</p>}
+        <Image
+          src={menu}
+          alt="menu hamburguer"
+          width={32}
+          height={32}
+          className="hover:cursor-pointer"
+        />
+        {showText && (
+          <p className="hover:cursor-pointer font-gwendolyn text-[2rem]">
+            Menu
+          </p>
+        )}
       </header>
       <ul className="flex flex-col gap-4 px-2">
         <Link href={"/"}>
           <li className="flex gap-6 py-2">
             <Image src={home} alt="ícone de casa" />
-            {showText && (
-              <p className="font-poppins self-center">Home</p>
-            )}
+            {showText && <p className="font-poppins self-center">Home</p>}
           </li>
         </Link>
         <Link href={"/nossa-historia"}>
@@ -61,16 +69,22 @@ export const NavBar = () => {
             )}
           </li>
         </Link>
-        <li className="flex gap-6 py-2">
-          <Image src={rings} alt="alianças de casamento" />
-          {showText && <p className="font-poppins self-center">Vamos casar</p>}
-        </li>
-        <li className="flex w-full gap-6 py-2">
-          <Image src={calendar} alt="ícone de calendário" />
-          {showText && (
-            <p className="font-poppins self-center">Salvar a data?</p>
-          )}
-        </li>
+        <Link href={"/vamos-casar"}>
+          <li className="flex gap-6 py-2">
+            <Image src={rings} alt="alianças de casamento" />
+            {showText && (
+              <p className="font-poppins self-center">Vamos casar</p>
+            )}
+          </li>
+        </Link>
+        <Link href={"/salvar-data"}>
+          <li className="flex w-full gap-6 py-2">
+            <Image src={calendar} alt="ícone de calendário" />
+            {showText && (
+              <p className="font-poppins self-center">Salvar a data?</p>
+            )}
+          </li>
+        </Link>
       </ul>
     </section>
   );

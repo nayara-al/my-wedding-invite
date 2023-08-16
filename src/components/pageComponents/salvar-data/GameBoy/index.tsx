@@ -1,8 +1,8 @@
 export const GameBoy = () => {
   return (
     <div className="bg-grayBase p-4">
-      <div className="bg-darkGray">
-        <p className="text-white"> Casamento - Nayara e Victor</p>
+      <div className="bg-darkGray p-4">
+        <p className="text-white pb-4"> Casamento - Nayara e Victor</p>
         <fieldset>
           <legend>Save</legend>
           <div>
