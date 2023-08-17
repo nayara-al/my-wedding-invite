@@ -1,10 +1,12 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Smooch } from "next/font/google";
-import { Gwendolyn } from "next/font/google";
-import { Poppins } from "next/font/google";
-import { Press_Start_2P } from "next/font/google";
+import {
+  Inter,
+  Smooch,
+  Gwendolyn,
+  Poppins,
+  Press_Start_2P,
+} from "next/font/google";
 
 const inter = Inter({
   subsets: ["latin"],
