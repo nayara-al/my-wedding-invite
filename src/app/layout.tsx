@@ -29,8 +29,8 @@ const poppins = Poppins({
 });
 const pressStart2P = Press_Start_2P({
   weight: ["400"],
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-pressStart",
+  subsets: ["latin"],
+  variable: "--font-pressStart2P",
 });
 
 export const metadata: Metadata = {
