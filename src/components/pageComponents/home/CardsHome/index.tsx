@@ -24,10 +24,10 @@ export default function CardHome() {
         <Image
           src={NV1}
           alt="uma das primeiras fotos do casal"
-          height={200}
+          height={360}
           className="rounded-lg"
         />
-        <p className="font-gwendolyn text-[32px] text-black">Nossa História</p>
+        <p className="font-gwendolyn text-[44px] text-black">Nossa História</p>
       </Link>
       <div
         className="h-fit bg-white p-4 flex flex-col rounded-lg gap-4 text-center items-center"
@@ -37,10 +37,10 @@ export default function CardHome() {
         <Image
           src={NV1}
           alt="uma das primeiras fotos do casal"
-          height={200}
+          height={360}
           className="rounded-lg"
         />
-        <p className="font-gwendolyn text-[32px]  text-black">Nossa História</p>
+        <p className="font-gwendolyn text-[44px]  text-black">Nossa História</p>
       </div>
       <div
         className="h-fit bg-white p-4 flex flex-col rounded-lg gap-4 text-center items-center"
@@ -50,10 +50,10 @@ export default function CardHome() {
         <Image
           src={NV1}
           alt="uma das primeiras fotos do casal"
-          height={200}
+          height={360}
           className="rounded-lg"
         />
-        <p className="font-gwendolyn text-[32px]  text-black">Nossa História</p>
+        <p className="font-gwendolyn text-[44px]  text-black">Nossa História</p>
       </div>
     </>
   );
