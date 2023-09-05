@@ -5,11 +5,8 @@ import React from "react";
 
 export default function SaveTheDate() {
   return (
-    <StructurePage>
-      <NavBar />
-      <div className="flex flex-1 bg-bgPage h-[100vh] gap-6 text-center justify-center items-center">
-        <GameBoy />
-      </div>
-    </StructurePage>
+    <div className="flex flex-1 bg-bgPage h-[100vh] gap-6 text-center justify-center items-center">
+      <GameBoy />
+    </div>
   );
 }

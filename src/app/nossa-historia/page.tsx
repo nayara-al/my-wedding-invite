@@ -7,14 +7,11 @@ import React from "react";
 
 export default function pages() {
   return (
-    <StructurePage>
-      <NavBar />
-      <div className="grow">
-        <PageTitle title="Nossa história"/>
-        <div className="flex self-center justify-center ">
-          <Scrap/>
-        </div>
+    <div className="grow">
+      <PageTitle title="Nossa história" />
+      <div className="flex self-center justify-center ">
+        <Scrap />
       </div>
-    </StructurePage>
+    </div>
   );
 }

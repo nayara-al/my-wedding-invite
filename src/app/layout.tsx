@@ -1,3 +1,4 @@
+import { StructurePage } from "@/components/common/StructurePage";
 import "./globals.css";
 import type { Metadata } from "next";
 import {
@@ -7,6 +8,7 @@ import {
   Poppins,
   Press_Start_2P,
 } from "next/font/google";
+import { NavBar } from "@/components/common/NavBar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -48,7 +50,10 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${smooch.variable} ${gwendolyn.variable} ${poppins.variable} ${pressStart2P.variable} `}
       >
-        {children}
+        <StructurePage>
+          <NavBar />
+          {children}
+        </StructurePage>
       </body>
     </html>
   );
