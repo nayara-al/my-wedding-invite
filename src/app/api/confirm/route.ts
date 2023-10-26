@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+/* import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 
 export default async function POST(
@@ -34,4 +34,4 @@ export default async function POST(
   } catch (error) {
     console.error(error);
   }
-}
+} */
