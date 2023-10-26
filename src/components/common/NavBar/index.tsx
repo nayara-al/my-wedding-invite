@@ -5,6 +5,7 @@ import rings from "../../../../public/rings.png";
 import Image from "next/image";
 import Link from "next/link";
 
+
 export const NavBar = () => {
   const [showText, setShowText] = useState(true);
 
@@ -21,13 +22,8 @@ export const NavBar = () => {
   }, []);
 
   return (
-    <section className="w-[100vw] bg-primary max-md:fixed max-md:bottom-0">
-      {showText ? (
-        <header className="bg-secondGreen text-[32px] flex items-center justify-center p-4">
-          Nosso Casamento
-        </header>
-      ) : null}
-      <ul className="flex justify-around text-[28px]">
+    <section className="w-[100vw] bg-primary max-md:fixed max-md:bottom-0 mb-4 max-md:mb-0 z-10">
+      <ul className="flex justify-around text-[20px] text-white">
         <Link href={"/"} className="text-center">
           <li className="flex gap-6 py-2">
             {showText ? (

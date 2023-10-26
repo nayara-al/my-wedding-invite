@@ -31,7 +31,7 @@ const GuestConfirm = () => {
   }
 
   return (
-    <div className="w-full items-center justify-center">
+    <div>
       <form onSubmit={handleSubmit}>
         <InputText
           id="nome"
@@ -57,7 +57,7 @@ const GuestConfirm = () => {
           onChange={(e) => setMessage(e.target.value)}
         />
 
-        <button type="submit" className="bg-primary p-2 rounded-sm">
+        <button type="submit" className="bg-primary p-2 rounded-lg w-full text-white font-bold font-poppins">
           Confirmar presença
         </button>
       </form>

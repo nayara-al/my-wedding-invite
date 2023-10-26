@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Confirm() {
   return (
-    <div>
+    <div className="flex w-full h-full justify-center items-center">
       <GuestConfirm />
     </div>
   );

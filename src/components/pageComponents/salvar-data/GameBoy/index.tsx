@@ -34,13 +34,13 @@ export const GameBoy = () => {
   return (
     <form
       onSubmit={formConfirm}
-      className="bg-grayBase p-6 border-solid border-2 border-darkGray rounded-t-lg rounded-bl-lg rounded-br-[60px]"
+      className="bg-grayBase p-6 border-solid border-2 border-darkGray rounded-t-lg rounded-bl-lg rounded-br-[60px] max-md:mt-6 max-sm:mb-[80px]"
     >
       <div className="bg-darkGray px-6 py-10 mb-5 rounded-md font-pressStart2P">
         <p className="text-white pb-4 text-[16px]">
           Casamento
           <br />
-          Nayara e Victor
+          Maria e João
         </p>
         <fieldset>
           <legend className="text-[12px] pb-4">Save</legend>

@@ -8,11 +8,11 @@ interface InputTextProps extends InputHTMLAttributes<HTMLInputElement> {
 
 export function InputText ({ label, error, id, ...rest }: InputTextProps) {
     return (
-        <div className="flex flex-col w-48">
-            <label className="ml-1" htmlFor={id}>
+        <div className="flex flex-col w-60">
+            <label className="ml-1 mb-1" htmlFor={id}>
                 {label}
             </label>
-            <input className="mb-[16px] rounded-md text-black" id={id} {...rest}/>
+            <input className="mb-[16px] rounded-md text-black py-2 px-2" id={id} {...rest}/>
         </div>
     )
 }

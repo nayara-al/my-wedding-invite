@@ -9,6 +9,7 @@ import {
   Press_Start_2P,
 } from "next/font/google";
 import { NavBar } from "@/components/common/NavBar";
+import { PageTitle } from "@/components/common/PageTitle";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -51,6 +52,7 @@ export default function RootLayout({
         className={`${inter.variable} ${smooch.variable} ${gwendolyn.variable} ${poppins.variable} ${pressStart2P.variable} `}
       >
         <StructurePage>
+          <PageTitle />
           <NavBar />
           {children}
         </StructurePage>

@@ -14,7 +14,7 @@ export default function CardHome() {
     gsap.to(currentTarget, { scale: 1, margin: 0, cursor: "arrow" });
   };
   return (
-    <>
+    <div className="flex gap-8 max-md:flex-col mb-[80px]">
       <Link
         href={"/nossa-historia"}
         className="h-fit bg-white p-4 flex flex-col rounded-lg gap-4 text-center items-center"
@@ -29,7 +29,8 @@ export default function CardHome() {
         />
         <p className="font-gwendolyn text-[44px] text-black">Nossa História</p>
       </Link>
-      <div
+      <Link
+        href={"/vamos-casar"}
         className="h-fit bg-white p-4 flex flex-col rounded-lg gap-4 text-center items-center"
         onMouseEnter={onEnter}
         onMouseLeave={onLeave}
@@ -40,9 +41,10 @@ export default function CardHome() {
           height={360}
           className="rounded-lg"
         />
-        <p className="font-gwendolyn text-[44px]  text-black">Nossa História</p>
-      </div>
-      <div
+        <p className="font-gwendolyn text-[44px]  text-black">Vamos casar!</p>
+      </Link>
+      <Link
+        href={"/salvar-data"}
         className="h-fit bg-white p-4 flex flex-col rounded-lg gap-4 text-center items-center"
         onMouseEnter={onEnter}
         onMouseLeave={onLeave}
@@ -53,8 +55,8 @@ export default function CardHome() {
           height={360}
           className="rounded-lg"
         />
-        <p className="font-gwendolyn text-[44px]  text-black">Nossa História</p>
-      </div>
-    </>
+        <p className="font-gwendolyn text-[44px]  text-black">Salvar a data</p>
+      </Link>
+    </div>
   );
 }

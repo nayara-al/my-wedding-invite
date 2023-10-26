@@ -1,10 +1,10 @@
 interface IPageTitle {
     title: string
 }
-export const PageTitle = ({title}: IPageTitle) => {
+export const PageTitle = () => {
     return (
-        <div className="font-gwendolyn bg-primary px-4 h-12 flex text-center self-center items-center justify-center">
-            <h1 className="text-[32px]">{title}</h1>
-        </div>
+        <header className="bg-secondGreen text-[32px] flex items-center justify-center p-2 text-white font-gwendolyn">
+          Maria e João
+        </header>
     )
 }
