@@ -1,12 +1,14 @@
-'use client'
+"use client";
 import { useState } from "react";
 import { InputText } from "../InputText";
 import axios from "axios";
+import { useToastfy } from "@/hooks/useToastfy";
 
 const GuestConfirm = () => {
   const [nome, setNome] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const showToast = useToastfy();
 
   async function handleSubmit(event: React.SyntheticEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -16,12 +18,12 @@ const GuestConfirm = () => {
         email: email,
         message: message,
       };
-      console.log('antes da api')
-      const response = await axios.post('/api/confirm', requestData)
-      console.log('saída da api')
+      console.log("antes da api");
+      const response = await axios.post("/api/confirm", requestData);
+      console.log("saída da api");
 
       if (response.status === 200) {
-        alert('Confirmação enviada!')
+        showToast({ text: "Confirmação enviada!", type: "confirm" });
       } else {
         console.error("Erro ao confirmar presença");
       }
@@ -57,7 +59,10 @@ const GuestConfirm = () => {
           onChange={(e) => setMessage(e.target.value)}
         />
 
-        <button type="submit" className="bg-primary p-2 rounded-lg w-full text-white font-bold font-poppins">
+        <button
+          type="submit"
+          className="bg-primary p-2 rounded-lg w-full text-white font-bold font-poppins"
+        >
           Confirmar presença
         </button>
       </form>

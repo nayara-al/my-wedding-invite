@@ -22,7 +22,7 @@ export const NavBar = () => {
   }, []);
 
   return (
-    <section className="w-[100vw] bg-primary max-md:fixed max-md:bottom-0 mb-4 max-md:mb-0 z-10">
+    <section className="max-w-[100vw] bg-primary max-md:fixed max-md:bottom-0 mb-4 max-md:mb-0 z-10">
       <ul className="flex justify-around text-[20px] text-white">
         <Link href={"/"} className="text-center">
           <li className="flex gap-6 py-2">

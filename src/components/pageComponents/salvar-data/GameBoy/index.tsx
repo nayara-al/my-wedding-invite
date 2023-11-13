@@ -4,10 +4,12 @@ import { ControlButtons } from "./ControlButtons";
 import { Directional } from "./Direcional";
 import { CaretRight } from "@phosphor-icons/react";
 import gsap from "gsap";
+import { useToastfy } from "@/hooks/useToastfy";
 
 export const GameBoy = () => {
   const [confirmValue, setConfirmValue] = useState("sim");
   const caretRef = useRef(null);
+  const showToast = useToastfy()
   useEffect(() => {
     gsap.to(caretRef.current, {
       y: confirmValue === "sim" ? -10 : 8,
@@ -18,7 +20,7 @@ export const GameBoy = () => {
   function formConfirm(event: FormEvent<HTMLFormElement>): void {
     event.preventDefault();
     if (confirmValue === "sim") window.location.replace('confirmar-presenca');
-    else alert("presença não confirmada");
+    else showToast({text: "presença não confirmada :(", type: "not-confirm"});
   }
 
   function handleConfirmChange(

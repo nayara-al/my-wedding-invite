@@ -21,7 +21,10 @@ module.exports = {
         black: "#000",
         white: "#fff",
         screen: "#6B5D04",
-        aBButton: "#6D1841"
+        aBButton: "#6D1841",
+        lightBlue: "#5E758A",
+        greenConfirm: "#96E065",
+        redDeny: "#E08665"
       },
       fontFamily:{
         inter: ['var(--font-inter)'],
