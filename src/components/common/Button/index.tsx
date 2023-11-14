@@ -24,7 +24,7 @@ export default function Button({
 
   return (
     <button
-      className={`px-6 py-2 border rounded-md ${buttonTypeClass} w-[200px]`}
+      className={`px-6 py-2 border rounded-md ${buttonTypeClass} w-[200px] max-sm:w-[100px] max-sm:px-1 max-sm:text-[12px]`}
       {...rest}
       disabled={isLoading}
     >

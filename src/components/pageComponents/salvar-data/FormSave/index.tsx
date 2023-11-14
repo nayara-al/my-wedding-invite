@@ -24,7 +24,7 @@ export default function FormSave() {
   };
 
   return (
-    <div className="p-10 border border-solid rounded-md bg-gray-200" id="formAnimated">
+    <div className="p-10 max-md:py-6 max-md:max-w-[80vw] border border-solid rounded-md bg-gray-200" id="formAnimated">
       <h2 className="py-2 text-[32px] font-poppins text-slate-900">
         Casamento de Maria e João
       </h2>
