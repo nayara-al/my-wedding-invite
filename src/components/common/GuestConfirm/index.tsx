@@ -33,7 +33,7 @@ const GuestConfirm = () => {
   }
 
   return (
-    <div>
+    <div className="p-4 m-4 border border-solid bg-zinc-400 rounded-lg shadow-lg bg-center">
       <form onSubmit={handleSubmit}>
         <InputText
           id="nome"
