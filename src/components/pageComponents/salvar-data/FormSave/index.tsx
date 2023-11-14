@@ -1,13 +1,12 @@
 import Button from "@/components/common/Button";
 import { useToastfy } from "@/hooks/useToastfy";
-import React, { FormEvent, useEffect, useRef, useState } from "react";
 
 export default function FormSave() {
   const showToast = useToastfy();
 
-  const formConfirm = (event: FormEvent<HTMLFormElement>): void => {
+  const formConfirm = (e: any) => {
     console.log("quero confirmar");
-    event.preventDefault();
+    e.preventDefault();
     showToast({
       type: "confirm",
       text: "Redirecionando para tela de confirmar presença",
@@ -18,9 +17,9 @@ export default function FormSave() {
     }, delay);
   };
 
-  const denyConfirm = (event: FormEvent<HTMLFormElement>): void => {
+  const denyConfirm = (e: any) => {
     console.log("não quero confirmar");
-    event.preventDefault();
+    e.preventDefault();
     showToast({ type: "not-confirm", text: "Presença não confirmada :(" });
   };
 
@@ -31,10 +30,10 @@ export default function FormSave() {
       </h2>
       <p className="py-2 text-slate-900">Deseja confirmar presença?</p>
       <div className="flex justify-around py-4">
-        <Button buttonType="confirm" onClick={() => formConfirm}>
+        <Button isLoading={false} buttonType="confirm" onClick={formConfirm}>
           Quero Confirmar
         </Button>
-        <Button buttonType="notConfirm" onClick={() => denyConfirm}>
+        <Button isLoading={false} buttonType="notConfirm" onClick={denyConfirm}>
           Não posso ir
         </Button>
       </div>

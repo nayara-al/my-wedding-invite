@@ -10,7 +10,7 @@ import {
 } from "next/font/google";
 import { NavBar } from "@/components/common/NavBar";
 import { PageTitle } from "@/components/common/PageTitle";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 
 const inter = Inter({
@@ -53,11 +53,11 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${smooch.variable} ${gwendolyn.variable} ${poppins.variable} ${pressStart2P.variable} `}
       >
-        <ToastContainer />
         <StructurePage>
           <PageTitle />
           <NavBar />
           {children}
+          <ToastContainer />
         </StructurePage>
       </body>
     </html>

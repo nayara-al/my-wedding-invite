@@ -9,8 +9,8 @@ function useToastfy() {
   return ({ type, text }: ToastfyProps) => {
     const toastConfig = {
       position: "top-center" as ToastPosition,
-      autoClose: 4000,
-      hideProgressBar: false,
+      autoClose: 3000,
+      hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
