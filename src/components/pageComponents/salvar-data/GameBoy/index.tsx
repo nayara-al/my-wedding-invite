@@ -9,7 +9,7 @@ import { useToastfy } from "@/hooks/useToastfy";
 export const GameBoy = () => {
   const [confirmValue, setConfirmValue] = useState("sim");
   const caretRef = useRef(null);
-  const showToast = useToastfy()
+  const showToast = useToastfy();
   useEffect(() => {
     gsap.to(caretRef.current, {
       y: confirmValue === "sim" ? -10 : 8,
@@ -19,8 +19,8 @@ export const GameBoy = () => {
   }, [confirmValue]);
   function formConfirm(event: FormEvent<HTMLFormElement>): void {
     event.preventDefault();
-    if (confirmValue === "sim") window.location.replace('confirmar-presenca');
-    else showToast({text: "presença não confirmada :(", type: "not-confirm"});
+    if (confirmValue === "sim") window.location.replace("confirmar-presenca");
+    else showToast({ text: "presença não confirmada :(", type: "not-confirm" });
   }
 
   function handleConfirmChange(
@@ -35,6 +35,7 @@ export const GameBoy = () => {
 
   return (
     <form
+      id="formJoystick"
       onSubmit={formConfirm}
       className="bg-grayBase p-6 border-solid border-2 border-darkGray rounded-t-lg rounded-bl-lg rounded-br-[60px] max-md:mt-6 max-sm:mb-[80px]"
     >
@@ -80,7 +81,7 @@ export const GameBoy = () => {
         </fieldset>
       </div>
       <div className="flex justify-around items-center py-16">
-        <Directional changeOption={changeOptions}/>
+        <Directional changeOption={changeOptions} />
         <ControlButtons />
       </div>
     </form>
