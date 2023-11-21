@@ -1,14 +1,14 @@
-/* import type { NextApiRequest, NextApiResponse } from "next";
-import nodemailer from "nodemailer";
+/* import nodemailer from "nodemailer";
+import { NextRequest, NextResponse } from "next/server";
 
 export default async function POST(
-  request: NextApiRequest,
-  response: NextApiResponse
+  request: NextRequest,
+  response: NextResponse
 ): Promise<void> {
   try {
     const { firstName, email, message } = request.body;
     const transporter = nodemailer.createTransport({
-      service: 'Gmail',
+      service: 'gmail',
       host: "smtp.gmail.com",
       port: 465, 
       secure: true, 
