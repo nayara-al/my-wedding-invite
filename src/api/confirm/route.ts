@@ -1,5 +1,5 @@
 /* import nodemailer from "nodemailer";
-import { NextRequest, NextResponse } from "next/server";
+import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function POST(
   request: NextRequest,

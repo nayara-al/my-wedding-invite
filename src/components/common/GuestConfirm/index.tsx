@@ -18,17 +18,23 @@ const GuestConfirm = () => {
         email: email,
         message: message,
       };
-      console.log("antes da api");
       const response = await axios.post("/api/confirm", requestData);
-      console.log("saída da api");
 
       if (response.status === 200) {
         showToast({ text: "Confirmação enviada!", type: "confirm" });
       } else {
         console.error("Erro ao confirmar presença");
+        showToast({
+          text: "Infelizmente tivemos um problema, tente novamente mais tarde.",
+          type: "not-confirm",
+        });
       }
     } catch (error) {
       console.error("Erro ao confirmar presença", error);
+      showToast({
+        text: "Infelizmente tivemos um problema, tente novamente mais tarde.",
+        type: "not-confirm",
+      });
     }
   }
 
