@@ -1,7 +1,7 @@
 export default function OurWedding() {
   return (
     <div className="flex flex-col justify-center items-center mb-[80px]">
-      <div className="p-4 text-center bg-secondGreen w-[600px] rounded-2xl shadow-xl flex flex-col gap-4 mt-4">
+      <div className="p-4 text-center bg-second w-[600px] max-md:w-4/5 max-w-[600px] rounded-2xl shadow-xl flex flex-col gap-4 mt-4">
         <header>
           <p>
             <strong>Data:</strong> 01/12/2024
