@@ -20,7 +20,7 @@ export default function FormSave() {
   const denyConfirm = (e: any) => {
     console.log("não quero confirmar");
     e.preventDefault();
-    showToast({ type: "not-confirm", text: "Presença não confirmada :(" });
+    showToast({ type: "error", text: "Presença não confirmada :(" });
   };
 
   return (

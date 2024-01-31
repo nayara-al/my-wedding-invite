@@ -20,7 +20,7 @@ export const GameBoy = () => {
   function formConfirm(event: FormEvent<HTMLFormElement>): void {
     event.preventDefault();
     if (confirmValue === "sim") window.location.replace("confirmar-presenca");
-    else showToast({ text: "presença não confirmada :(", type: "not-confirm" });
+    else showToast({ text: "presença não confirmada :(", type: "error" });
   }
 
   function handleConfirmChange(
