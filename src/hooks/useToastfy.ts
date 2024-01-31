@@ -1,7 +1,7 @@
 import { Theme, ToastPosition, toast } from "react-toastify";
 
 interface ToastfyProps {
-  type: "confirm" | "not-confirm";
+  type: "confirm" | "error";
   text: string;
 }
 
@@ -24,10 +24,10 @@ function useToastfy() {
           className: "toast-confirm",
         });
         break;
-      case "not-confirm":
+      case "error":
         toast.error(text, {
           ...toastConfig,
-          className: "toast-not-confirm",
+          className: "toast-error",
         });
         break;
 

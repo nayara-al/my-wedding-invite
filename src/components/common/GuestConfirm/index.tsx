@@ -25,15 +25,15 @@ const GuestConfirm = () => {
       } else {
         console.error("Erro ao confirmar presença");
         showToast({
-          text: "Infelizmente tivemos um problema, tente novamente mais tarde.",
-          type: "not-confirm",
+          text: "Algo deu errado :(",
+          type: "error",
         });
       }
     } catch (error) {
       console.error("Erro ao confirmar presença", error);
       showToast({
-        text: "Infelizmente tivemos um problema, tente novamente mais tarde.",
-        type: "not-confirm",
+        text: "Algo deu errado :(",
+        type: "error",
       });
     }
   }
