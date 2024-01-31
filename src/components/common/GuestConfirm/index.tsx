@@ -18,7 +18,7 @@ const GuestConfirm = () => {
         email: email,
         message: message,
       };
-      const response = await axios.post("/api/confirm", requestData);
+      const response = await axios.post("/api", requestData);
 
       if (response.status === 200) {
         showToast({ text: "Confirmação enviada!", type: "confirm" });

@@ -1,6 +1,10 @@
-/* import nodemailer from "nodemailer";
+import nodemailer from "nodemailer";
+import { NextApiResponse } from "next";
 
-export async function POST(request: Request) {
+export async function POST(
+  request: Request,
+  res: NextApiResponse
+): Promise<void> {
   try {
     const { firstName, email, message } = await request.json();
     const transporter = nodemailer.createTransport({
@@ -27,17 +31,10 @@ export async function POST(request: Request) {
     };
     const response = await transporter.sendMail(mailOption);
     if (response.accepted)
-      return Response.json({ message: "Email Sent Successfully" });
-    else
-      Response.json(
-        { message: "Algo deu errado, tente novamente mais tarde." },
-        { status: 500 }
-      );
+      res.status(200).json({ message: "Email Sent Successfully" });
+    else res.status(500).json({ message: "Failed to send email" });
   } catch (error) {
     console.error(error);
-    return Response.json(
-      { message: "Algo deu errado, tente novamente mais tarde." },
-      { status: 500 }
-    );
+    res.status(500).json({ message: "Failed to send email" });
   }
-} */
+}
