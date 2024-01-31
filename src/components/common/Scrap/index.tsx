@@ -2,36 +2,32 @@ export const Scrap = () => {
   return (
     <div className="mb-[80px] gap-4 flex flex-col text-center bg-amber-200 mt-12 w-[460px] p-4 shadow-md border border-gray-300 rounded-lg text-black min-h-[160px]">
       <p>
-          Há muitos anos, em uma pequena cidade à beira do mar, Maria e João se
-          encontraram pela primeira vez. Era uma manhã de verão e o sol brilhava
-          intensamente, refletindo nas águas cristalinas do oceano. Maria era uma
-          jovem cheia de entusiasmo e paixão pela vida. Ela trabalhava como artista,
-          criando belas pinturas que capturavam a beleza do mundo ao seu redor.
-          João, por outro lado, era um músico talentoso, cujas melodias enchiam o
-          ar com doçura e harmonia. Além disso, ambos compartilhavam uma paixão por
-          jogos eletrônicos e filmes de heróis.
+        Era uma tarde de sábado, em um evento de jovens da igreja, onde destinos
+        se entrelaçaram e uma história de amor começou a se desenhar. Em uma
+        tarde de vôlei, Nayara e Victor conversaram pela primeira vez. A paixão
+        pelos esportes e a alegria de estarem na presença de amigos em comum
+        criaram uma conexão especial entre eles. Conforme conversavam e se
+        conheciam, descobriram vários gostos em comum, o que solidificou essa
+        amizade inicial em algo mais profundo. À medida que compartilhavam
+        risadas em conversas de filmes e desfrutavam de momentos juntos em
+        alguns jogos eletrônicos, Nayara e Victor perceberam que a amizade que
+        começou na igreja estava se transformando em algo mais significativo.
       </p>
       <p>
-          O destino os uniu em um festival
-          local, onde Maria estava expondo suas obras de arte e João estava
-          tocando sua guitarra para a multidão. Quando seus olhos se encontraram,
-          algo mágico aconteceu. Eles começaram a conversar e logo descobriram que
-          compartilhavam muitos interesses em comum, incluindo sua paixão pelas
-          artes, jogos eletrônicos e filmes de heróis, bem como sua fé compartilhada
-          em Deus e sua afiliação à mesma igreja.
+        A cumplicidade crescia, e o interesse romântico florescia lentamente,
+        como um jardim cuidadosamente cultivado. Movidos pela fé que
+        compartilhavam e pelo desejo de construir uma vida juntos, Nayara e
+        Victor iniciaram um período de oração e discernimento. Foram cinco anos
+        de namoro até que Deus abriu portas de oportunidade para ambos no campo
+        profissional, sinalizando que era o momento de dar o próximo passo em
+        sua jornada juntos.
       </p>
       <p>
-          O amor deles cresceu como as
-          estações do ano. Passaram os verões explorando a costa, jogando jogos
-          eletrônicos e assistindo a filmes de heróis juntos, as tardes de outono
-          caminhando pelas florestas e as noites de inverno se aquecendo ao lado da
-          lareira enquanto compartilhavam histórias e músicas. Cada estação trouxe
-          novas aventuras e memórias que selaram seu vínculo. Finalmente, na
-          primavera de um ano memorável, João ajoelhou-se em uma clareira repleta
-          de flores silvestres e pediu a mão de Maria em casamento. Ela aceitou com
-          lágrimas de felicidade, e eles prometeram passar o resto de suas vidas
-          juntos, criando belas obras de arte, músicas e histórias que refletiriam o
-          amor que compartilhavam, juntamente com sua fé e amor por Deus.
+        Com gratidão nos corações, Nayara e Victor decidiram trilhar o caminho
+        do matrimônio. A celebração do casamento não é apenas o início de uma
+        nova fase, mas a continuação de uma história de amor que começou na
+        igreja, foi moldada por interesses compartilhados e fortalecida pela fé
+        em Deus.
       </p>
     </div>
   );

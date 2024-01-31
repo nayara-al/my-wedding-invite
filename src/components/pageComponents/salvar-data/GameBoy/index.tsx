@@ -43,7 +43,7 @@ export const GameBoy = () => {
         <p className="text-white pb-4 text-[16px]">
           Casamento
           <br />
-          Maria e João
+          Nayara e Victor
         </p>
         <fieldset>
           <legend className="text-[12px] pb-4">Save</legend>

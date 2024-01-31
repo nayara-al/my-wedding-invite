@@ -49,7 +49,7 @@ const ThanksGuest = ({ nome }: IConfirm) => (
               fontFamily: "'Dancing Script', 'Satisfy', 'Great Vibes', cursive",
             }}
           >
-            Maria e João.
+            Nayara e Victor.
           </Text>
         </Container>
         <Img src="../../../public/N.png" />
