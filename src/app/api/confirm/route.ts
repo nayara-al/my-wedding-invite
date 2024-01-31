@@ -1,4 +1,4 @@
-import nodemailer from "nodemailer";
+/* import nodemailer from "nodemailer";
 
 export async function POST(request: Request) {
   try {
@@ -40,4 +40,4 @@ export async function POST(request: Request) {
       { status: 500 }
     );
   }
-}
+} */
