@@ -39,8 +39,9 @@ const GuestConfirm = () => {
   }
 
   return (
-    <div className="p-4 m-4 border border-solid bg-zinc-400 rounded-lg shadow-lg bg-center">
-      <form onSubmit={handleSubmit}>
+    <div className="py-4 max-md:mb-12">
+      <form className="p-12 gap-4 flex flex-col items-center justify-center m-4 border border-solid bg-second rounded-lg shadow-lg bg-center" onSubmit={handleSubmit}>
+        <h1 className="font-gwendolyn text-white text-3xl">Confirmação de presença</h1>
         <InputText
           id="nome"
           label="Nome"
@@ -63,6 +64,7 @@ const GuestConfirm = () => {
           type="text"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
+          className="min-h-[120px]"
         />
 
         <button
