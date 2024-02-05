@@ -1,10 +1,10 @@
 "use client";
 import Toggle from "@/components/common/Toggle";
-import FormSave from "@/components/pageComponents/salvar-data/FormSave";
-import { GameBoy } from "@/components/pageComponents/salvar-data/GameBoy";
+import FormSave from "@/app/salvar-data/components/FormSave";
 import { useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { CSSPlugin } from "gsap/CSSPlugin";
+import { GameBoy } from "../GameBoy";
 
 gsap.registerPlugin(CSSPlugin);
 
