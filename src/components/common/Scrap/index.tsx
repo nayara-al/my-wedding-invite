@@ -3,9 +3,9 @@ import SectionMarquee from "../Marquee";
 
 export const Scrap = () => {
   const cssParagraph =
-    "bg-amber-200 w-[460px] p-4 shadow-md border border-gray-300 rounded-lg";
+    "bg-amber-200 w-full max-w-[460px] max-md:w-[90%] p-4 shadow-md border border-gray-300 rounded-lg";
   return (
-    <div className="mb-[80px] gap-4 flex flex-col text-center mt-12  text-black min-h-[160px] items-center justify-center">
+    <div className="mb-[80px] gap-16 flex flex-col text-center mt-12 w-full text-black min-h-[160px] items-center justify-center">
       <p className={`${cssParagraph}`}>
         Era uma tarde de sábado, em um evento de jovens da igreja, onde destinos
         se entrelaçaram e uma história de amor começou a se desenhar. Em uma
@@ -18,13 +18,7 @@ export const Scrap = () => {
         alguns jogos eletrônicos, Nayara e Victor perceberam que a amizade que
         começou na igreja estava se transformando em algo mais significativo.
       </p>
-      <div className="flex items-center justify-center">
-        <Image src="/coracao.svg" alt="" width={20} height={20} className="text-red-700"/>
-      </div>
       <SectionMarquee />
-      <div className="flex items-center justify-center">
-        <Image src="/coracao.svg" alt="" width={20} height={20} />
-      </div>
       <p className={`${cssParagraph}`}>
         A cumplicidade crescia, e o interesse romântico florescia lentamente,
         como um jardim cuidadosamente cultivado. Movidos pela fé que
