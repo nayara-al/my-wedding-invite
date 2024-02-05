@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { format, differenceInMilliseconds } from "date-fns";
 
 interface CountdownTimerProps {
   targetDate: Date;
@@ -14,8 +15,7 @@ interface TimeLeft {
 
 export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
   const calculateTimeLeft = (): TimeLeft => {
-    const now = new Date().getTime();
-    const difference = targetDate.getTime() - now;
+    const difference = differenceInMilliseconds(targetDate, new Date());
 
     if (difference <= 0) {
       return { days: 0, hours: 0, minutes: 0, seconds: 0 };
@@ -34,33 +34,37 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
+    if (typeof window !== "undefined") {
+      const timer = setInterval(() => {
+        setTimeLeft(calculateTimeLeft());
+      }, 1000);
 
-    return () => clearInterval(timer);
+      return () => clearInterval(timer);
+    }
   }, [targetDate]);
 
   return (
     <div className="p-8 bg-white w-full flex flex-col gap-8">
-      <p className="text-center font-bold text-xl font-poppins text-gray-500">Contagem regressiva para {targetDate.toLocaleDateString()}</p>
+      <p className="text-center font-bold text-xl font-poppins text-gray-500">
+        Contagem regressiva para {format(targetDate, "dd/MM/yyyy")}
+      </p>
       <div className="flex gap-8 items-center justify-center">
-          <div className="bg-primary text-white rounded-lg font-semibold w-20 h-20 flex flex-col items-center justify-center">
-            {timeLeft.days}
-            <p>dias</p>
-          </div>
-          <div className="bg-primary text-white rounded-lg font-semibold w-20 h-20 flex flex-col items-center justify-center">
-            {timeLeft.hours}
-            <p>horas</p>
-          </div>
-          <div className="bg-primary text-white rounded-lg font-semibold w-20 h-20 flex flex-col items-center justify-center">
-            {timeLeft.minutes}
-            <p>minutos</p>
-          </div>
-          <div className="bg-primary text-white rounded-lg font-semibold w-20 h-20 flex flex-col items-center justify-center">
-            {timeLeft.seconds}
-            <p>segundos</p>
-          </div>
+        <div className="bg-primary text-white rounded-lg font-semibold w-20 h-20 flex flex-col items-center justify-center">
+          {timeLeft.days}
+          <p>dias</p>
+        </div>
+        <div className="bg-primary text-white rounded-lg font-semibold w-20 h-20 flex flex-col items-center justify-center">
+          {timeLeft.hours}
+          <p>horas</p>
+        </div>
+        <div className="bg-primary text-white rounded-lg font-semibold w-20 h-20 flex flex-col items-center justify-center">
+          {timeLeft.minutes}
+          <p>minutos</p>
+        </div>
+        <div className="bg-primary text-white rounded-lg font-semibold w-20 h-20 flex flex-col items-center justify-center">
+          {timeLeft.seconds}
+          <p>segundos</p>
+        </div>
       </div>
     </div>
   );
