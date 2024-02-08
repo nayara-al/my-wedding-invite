@@ -2,10 +2,6 @@
 import { useState, useEffect } from "react";
 import { format, differenceInMilliseconds } from "date-fns";
 
-interface CountdownTimerProps {
-  targetDate: Date;
-}
-
 interface TimeLeft {
   days: number;
   hours: number;
@@ -13,7 +9,8 @@ interface TimeLeft {
   seconds: number;
 }
 
-export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
+export default function CountdownTimer() {
+  const targetDate = new Date("2024-12-01T19:00:00");
   const calculateTimeLeft = (): TimeLeft => {
     const difference = differenceInMilliseconds(targetDate, new Date());
 
@@ -31,7 +28,7 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
     return { days, hours, minutes, seconds };
   };
 
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>(() => calculateTimeLeft());
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -41,7 +38,7 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
 
       return () => clearInterval(timer);
     }
-  }, [targetDate]);
+  }, []);
 
   return (
     <div className="p-8 bg-white w-full flex flex-col gap-8">
