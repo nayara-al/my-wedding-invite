@@ -77,7 +77,7 @@ export default function SectionMarquee() {
           <Image
             width={400}
             height={400}
-            src={"/images/5.jpg"}
+            src={"/images/5.JPG"}
             alt=""
             className="mx-8 rounded-xl"
           />
