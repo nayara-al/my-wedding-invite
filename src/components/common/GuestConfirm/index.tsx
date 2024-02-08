@@ -39,8 +39,9 @@ const GuestConfirm = () => {
   }
 
   return (
-    <div className="py-4 max-md:mb-12">
-      <form className="p-12 gap-4 flex flex-col items-center justify-center m-4 border border-solid bg-second rounded-lg shadow-lg bg-center" onSubmit={handleSubmit}>
+    <div className="max-md:mb-12 mt-24 h-full flex justify-center items-center flex-col gap-20">
+      <h1 className="text-5xl font-gwendolyn">Obrigada por querer estar conosco no nosso grande dia</h1>
+      <form className="p-12 gap-4 flex flex-col items-center justify-center m-4 border border-solid bg-primary rounded-lg shadow-lg bg-center" onSubmit={handleSubmit}>
         <h1 className="font-gwendolyn text-white text-3xl">Confirmação de presença</h1>
         <InputText
           id="nome"
@@ -69,7 +70,7 @@ const GuestConfirm = () => {
 
         <button
           type="submit"
-          className="bg-primary p-2 rounded-lg w-full text-white font-bold font-poppins"
+          className="bg-slate-700 p-2 rounded-lg w-full text-white font-bold font-poppins"
         >
           Confirmar presença
         </button>

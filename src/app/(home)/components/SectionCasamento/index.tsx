@@ -9,7 +9,7 @@ export default function SectionCasamento() {
             <Image src="/rings.png" alt="" width={40} height={40} />
             <h2 className="font-gwendolyn text-5xl">Cerimônia</h2>
           </div>
-          <div className="flex justify-between text-2xl font-poppins">
+          <div className="flex max-md:flex-wrap max-md:gap-4 justify-between max-md:justify-center text-2xl font-poppins">
             <p>
               <strong>Data:</strong> 01/12/2024
             </p>

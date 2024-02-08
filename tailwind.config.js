@@ -22,8 +22,6 @@ module.exports = {
         redDeny: "#E08665"
       },
       fontFamily:{
-        inter: ['var(--font-inter)'],
-        smooch: ['var(--font-smooch)'],
         gwendolyn: ['var(--font-gwendolyn)'],
         poppins: ['var(--font-poppins)'],
         pressStart2P: ['var(--font-pressStart2P)'],
