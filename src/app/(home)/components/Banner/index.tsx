@@ -16,7 +16,7 @@ export default function Banner({ ...props }: BannerProps) {
         <Image
           width={600}
           height={400}
-          className="h-full w-full object-cover relative opacity-50"
+          className="h-full w-full object-cover relative opacity-50 blur-sm"
           src="/NeVBanner.JPG"
           alt="Imagem do ensaio do casal"
         />

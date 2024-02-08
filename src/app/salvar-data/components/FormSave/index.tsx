@@ -5,7 +5,6 @@ export default function FormSave() {
   const showToast = useToastfy();
 
   const formConfirm = (e: any) => {
-    console.log("quero confirmar");
     e.preventDefault();
     showToast({
       type: "confirm",
@@ -18,7 +17,6 @@ export default function FormSave() {
   };
 
   const denyConfirm = (e: any) => {
-    console.log("não quero confirmar");
     e.preventDefault();
     showToast({ type: "error", text: "Presença não confirmada :(" });
   };
