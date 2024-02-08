@@ -3,7 +3,6 @@ import { gsap } from "gsap";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import NV1 from "../../../../../public/nv1.jpeg";
 import NV2 from "../../../../../public/nv2.jpg";
 import NV3 from "../../../../../public/nv3.jpg";
 import Section from "@/components/common/Section";
@@ -25,7 +24,7 @@ export default function CardHome() {
         onMouseLeave={onLeave}
       >
         <Image
-          src={NV1}
+          src={NV2}
           alt="uma das primeiras fotos do casal"
           height={360}
           className="rounded-lg"
