@@ -39,9 +39,9 @@ const GuestConfirm = () => {
   }
 
   return (
-    <div className="max-md:mb-12 mt-24 h-full flex justify-center items-center flex-col gap-20">
-      <h1 className="text-5xl font-gwendolyn">Obrigada por querer estar conosco no nosso grande dia</h1>
-      <form className="p-12 gap-4 flex flex-col items-center justify-center m-4 border border-solid bg-primary rounded-lg shadow-lg bg-center" onSubmit={handleSubmit}>
+    <div className="max-md:mb-12 mt-12 h-full flex justify-center items-center flex-col gap-12">
+      <h1 className="text-xl max-w-md text-center text-white font-bold">Obrigada por querer estar conosco no nosso grande dia</h1>
+      <form className="p-12 max-cp:p-8 gap-4 flex flex-col items-center justify-center mb-12 border border-solid bg-primary rounded-lg shadow-lg bg-center" onSubmit={handleSubmit}>
         <h1 className="font-gwendolyn text-white text-3xl">Confirmação de presença</h1>
         <InputText
           id="nome"

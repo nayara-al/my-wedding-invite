@@ -42,7 +42,7 @@ export default function ConfirmForm() {
   }, [formConfirm, idElement]);
 
   return (
-    <div className="py-12 flex flex-col items-center gap-10 my-4 h-screen">
+    <div className="py-12 flex flex-col items-center gap-10 my-4 h-[85lvh]">
       <Toggle
         value={formConfirm ? "Confirmação formal" : "Confirmação por joystick"}
         onChange={toggleElement}

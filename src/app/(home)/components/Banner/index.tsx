@@ -24,7 +24,7 @@ export default function Banner({ ...props }: BannerProps) {
           <p className="font-gwendolyn font-bold text-center text-7xl">
             Nayara e Victor
           </p>
-          <p className="font-poppins font-bold text-center text-lg">01 / 12 / 2024</p>
+          <p className="font-poppins font-bold text-center text-lg">16 / 12 / 2024</p>
         </div>
       </div>
       <p className="text-xs text-slate-200">

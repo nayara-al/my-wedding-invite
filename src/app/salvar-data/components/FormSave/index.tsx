@@ -22,12 +22,12 @@ export default function FormSave() {
   };
 
   return (
-    <div className="p-10 max-md:py-6 max-md:max-w-[80vw] border border-solid rounded-md bg-gray-200" id="formAnimated">
+    <div className="p-10 max-md:p-4 max-md:py-6 max-md:max-w-[80vw] border border-solid rounded-md bg-gray-200" id="formAnimated">
       <h2 className="py-2 text-[32px] font-poppins text-slate-900">
         Casamento de Nayara e Victor
       </h2>
       <p className="py-2 text-slate-900">Deseja confirmar presença?</p>
-      <div className="flex justify-around py-4">
+      <div className="flex justify-around py-4 max-cp:py-2 max-cp:flex-wrap">
         <Button isLoading={false} buttonType="confirm" onClick={formConfirm}>
           Quero Confirmar
         </Button>
