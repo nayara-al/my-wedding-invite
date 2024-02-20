@@ -7,10 +7,10 @@ export default function Contador() {
   );
   return (
     <>
-      <p className="text-center font-bold text-xl font-poppins text-gray-500">
+      <h3 data-testid="cypress-title-contagem" className="text-center font-bold text-xl font-poppins text-gray-500">
         Contagem regressiva
-      </p>
-      <div className="flex gap-8 items-center justify-center">
+      </h3>
+      <div data-testid="cypress-contador-components" className="flex gap-8 items-center justify-center">
         <div className="bg-primary text-white rounded-lg font-semibold w-20 h-20 flex flex-col items-center justify-center">
           {day}
           <p>dias</p>

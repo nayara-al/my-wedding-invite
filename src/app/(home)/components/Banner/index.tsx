@@ -8,6 +8,7 @@ export default function Banner({ ...props }: BannerProps) {
     <>
       <div
         {...props}
+        data-testid="cypress-banner"
         className={twMerge(
           "w-full h-full flex flex-col items-center justify-center",
           props.className
@@ -20,8 +21,8 @@ export default function Banner({ ...props }: BannerProps) {
           src="/NeVBanner.JPG"
           alt="Imagem do ensaio do casal"
         />
-        <div className="absolute top-auto text-gray-600">
-          <p className="font-gwendolyn font-bold text-center text-7xl">
+        <div  className="absolute top-auto text-gray-600">
+          <p data-testid="cypress-banner-nome" className="font-gwendolyn font-bold text-center text-7xl">
             Nayara e Victor
           </p>
           <p className="font-poppins font-bold text-center text-lg">16 / 12 / 2024</p>

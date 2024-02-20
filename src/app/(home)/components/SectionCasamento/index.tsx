@@ -11,7 +11,7 @@ export default function SectionCasamento() {
           </div>
           <div className="flex max-md:flex-wrap max-md:gap-4 justify-between max-md:justify-center text-2xl font-poppins">
             <p>
-              <strong>Data:</strong> 01/12/2024
+              <strong>Data:</strong> 16/12/2024
             </p>
             <p>
               <strong>Local:</strong>Salão de Festas
