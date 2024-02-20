@@ -1,10 +1,6 @@
 import nodemailer from "nodemailer";
-import { NextApiResponse } from "next";
 
-export async function POST(
-  request: Request,
-  res: NextApiResponse
-): Promise<void> {
+export async function POST(request: Request) {
   try {
     const { firstName, email, message } = await request.json();
     const transporter = nodemailer.createTransport({
@@ -17,10 +13,9 @@ export async function POST(
         pass: process.env.MAIL_SENDER_PASS,
       },
     });
-
     const mailOption = {
       from: process.env.MAIL_SENDER,
-      to: process.env.MAIL_SENDER, email,
+      to: `${process.env.MAIL_SENDER}, ${email}`,
       subject: "Confirmação de presença",
       html: `
       <h1>Obrigada por ter avaliado minha aplicação :)</h1>
@@ -31,11 +26,18 @@ export async function POST(
         `,
     };
     const response = await transporter.sendMail(mailOption);
-    if (response.accepted)
-      res.status(200).json({ message: "Email Sent Successfully" });
-    else res.status(500).json({ message: "Failed to send email" });
+    if (response.accepted) {
+      return Response.json({ message: "Email Sent Successfully" });
+    } else
+      Response.json(
+        { message: "Algo deu errado, tente novamente mais tarde." },
+        { status: 500 }
+      );
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: "Failed to send email" });
+    return Response.json(
+      { message: "Algo deu errado, tente novamente mais tarde." },
+      { status: 500 }
+    );
   }
 }
