@@ -20,9 +20,10 @@ export async function POST(
 
     const mailOption = {
       from: process.env.MAIL_SENDER,
-      to: process.env.MAIL_SENDER,
+      to: process.env.MAIL_SENDER, email,
       subject: "Confirmação de presença",
       html: `
+      <h1>Obrigada por ter avaliado minha aplicação :)</h1>
       <h3>Olá, temos uma nova confirmação de presença para o casamento!</h3>
       <li>Nome: ${firstName} </li>
       <li>E-mail: ${email} </li>

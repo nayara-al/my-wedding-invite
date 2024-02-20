@@ -16,14 +16,16 @@ export default function CardHome() {
     gsap.to(currentTarget, { scale: 1, margin: 0, cursor: "arrow" });
   };
   return (
-    <Section>
+    <Section data-testid="cypress-cards-home">
       <Link
+        data-testid="cypress-link-nossa-historia"
         href={"/nossa-historia"}
         className="h-fit bg-white p-4 flex flex-col rounded-lg gap-4 text-center items-center"
         onMouseEnter={onEnter}
         onMouseLeave={onLeave}
       >
         <Image
+          data-testid="cypress-image-nossa-historia"
           src={NV2}
           alt="uma das primeiras fotos do casal"
           height={360}
@@ -32,12 +34,14 @@ export default function CardHome() {
         <p className="font-gwendolyn text-[44px] text-black">Nossa História</p>
       </Link>
       <Link
+        data-testid="cypress-link-salvar-data"
         href={"/salvar-data"}
         className="h-fit bg-white p-4 flex flex-col rounded-lg gap-4 text-center items-center"
         onMouseEnter={onEnter}
         onMouseLeave={onLeave}
       >
         <Image
+          data-testid="cypress-image-salvar-data"
           src={NV3}
           alt="uma das primeiras fotos do casal"
           height={360}
