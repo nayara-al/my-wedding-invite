@@ -1,3 +1,4 @@
+import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(request: Request) {
@@ -25,19 +26,24 @@ export async function POST(request: Request) {
       <li>Mensagem: ${message} </li>
         `,
     };
-    const response = await transporter.sendMail(mailOption);
-    if (response.accepted) {
-      return Response.json({ message: "Email Sent Successfully" });
-    } else
-      Response.json(
-        { message: "Algo deu errado, tente novamente mais tarde." },
-        { status: 500 }
-      );
-  } catch (error) {
-    console.error(error);
-    return Response.json(
-      { message: "Algo deu errado, tente novamente mais tarde." },
-      { status: 500 }
+    await new Promise((resolve, reject) => {
+      transporter.sendMail(mailOption, function (err, info) {
+        if (err) {
+          console.error('Error mailOption:', err);
+          reject(err);
+        } else {
+          console.log('Info mailOption:', info);
+          resolve(info);
+        }
+      });
+    });
+
+    // if ok response
+    return NextResponse.json(
+      { message: 'Email Sent Successfully' },
+      { status: 200 },
     );
+  } catch (error) {
+    return NextResponse.json({ status: 500 });
   }
 }

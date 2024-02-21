@@ -8,16 +8,18 @@ const GuestConfirm = () => {
   const [nome, setNome] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const [isDisable, setIsDisable] = useState<boolean>(false);
   const showToast = useToastfy();
 
   async function handleSubmit(event: React.SyntheticEvent<HTMLFormElement>) {
     event.preventDefault();
+    setIsDisable(true);
+    const requestData = {
+      firstName: nome,
+      email: email,
+      message: message,
+    };
     try {
-      const requestData = {
-        firstName: nome,
-        email: email,
-        message: message,
-      };
       const response = await axios.post("/api", requestData);
 
       if (response.status === 200) {
@@ -29,6 +31,10 @@ const GuestConfirm = () => {
           type: "error",
         });
       }
+      setEmail("");
+      setMessage("");
+      setNome("");
+      setIsDisable(false);
     } catch (error) {
       console.error("Erro ao confirmar presença", error);
       showToast({
@@ -38,11 +44,20 @@ const GuestConfirm = () => {
     }
   }
 
+  let cssButton = isDisable ? "bg-slate-300 text-black" : "bg-slate-700 text-white"
+
   return (
     <div className="max-md:mb-12 mt-12 h-full flex justify-center items-center flex-col gap-12">
-      <h1 className="text-xl max-w-md text-center text-white font-bold">Obrigada por querer estar conosco no nosso grande dia</h1>
-      <form className="p-12 max-cp:p-8 gap-4 flex flex-col items-center justify-center mb-12 border border-solid bg-primary rounded-lg shadow-lg bg-center" onSubmit={handleSubmit}>
-        <h1 className="font-gwendolyn text-white text-3xl">Confirmação de presença</h1>
+      <h1 className="text-xl max-w-md text-center text-slate-900 font-bold">
+        Obrigada por querer estar conosco no nosso grande dia
+      </h1>
+      <form
+        className="p-12 max-cp:p-8 gap-4 flex flex-col items-center justify-center mb-12 border border-solid bg-primary rounded-lg shadow-lg bg-center"
+        onSubmit={handleSubmit}
+      >
+        <h1 className="font-gwendolyn text-white text-3xl">
+          Confirmação de presença
+        </h1>
         <InputText
           id="nome"
           label="Nome"
@@ -58,21 +73,24 @@ const GuestConfirm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <InputText
-          id="mensagem"
-          label="Mensagem para os noivos"
-          placeholder="Digite aqui seu recado"
-          type="text"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          className="min-h-[120px]"
-        />
-
+        <div className="flex flex-col min-w-120 w-full">
+          <label className="ml-1 mb-1 text-white" htmlFor={"message"}>
+            Mensagem
+          </label>
+          <textarea
+            id="message"
+            placeholder="Digite aqui seu recado"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            className="mb-[16px] rounded-md text-black py-2 px-2 min-h-[120px]"
+          ></textarea>
+        </div>
         <button
+          disabled={isDisable}
           type="submit"
-          className="bg-slate-700 p-2 rounded-lg w-full text-white font-bold font-poppins"
+          className={`${cssButton} p-2 rounded-lg w-full font-bold font-poppins`}
         >
-          Confirmar presença
+          {isDisable? "Aguarde...": "Confirmar presença"}
         </button>
       </form>
     </div>
