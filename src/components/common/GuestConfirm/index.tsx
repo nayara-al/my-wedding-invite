@@ -44,7 +44,7 @@ const GuestConfirm = () => {
     }
   }
 
-  let cssButton = isDisable ? "bg-slate-300 text-black" : "bg-slate-700 text-white"
+  let cssButton = isDisable ? "bg-slate-300 text-black opacity-30" : "bg-slate-700 text-white"
 
   return (
     <div className="max-md:mb-12 mt-12 h-full flex justify-center items-center flex-col gap-12">
@@ -64,6 +64,7 @@ const GuestConfirm = () => {
           placeholder="nome do convidado"
           value={nome}
           onChange={(e) => setNome(e.target.value)}
+          required
         />
         <InputText
           id="email"
@@ -72,6 +73,7 @@ const GuestConfirm = () => {
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
         <div className="flex flex-col min-w-120 w-full">
           <label className="ml-1 mb-1 text-white" htmlFor={"message"}>
