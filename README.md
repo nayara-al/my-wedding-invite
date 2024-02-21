@@ -1,34 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+	<img alt="My Wedding Invite" src=".github/logo.png" width="320px" />
+</h1>
 
-## Getting Started
+# my-wedding-invite
 
-First, run the development server:
+Bem-vindo ao projeto **My Wedding Invite!** Este é um site criado com o propósito de servir como um portfólio, simulando um convite de casamento virtual. Ele fornece informações sobre o evento, o casal e permite que os convidados confirmem a presença. Essa confirmação é enviada via e-mail tanto para o casal, quanto para o convidado que acabou de confirmar.
+
+## 🎯 Objetivo
+Este projeto foi desenvolvido com proposito de estudo:
+- Criação de API com Node.js e biblioteca Nodemailer;
+- Uso de testes no front com a ferramente Cypress;
+- Next.js 13 com pasta app e páginas SSR.
+
+## 📝Documentação
+
+Para rodar esse projeto se faz necessário, antes de tudo, clocar o repositório e instalar as dependências de projeto através do comando:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+  npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Após isso, basta rodar um comando para conseguir rodar o projeto localmente:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  npm run dev
+```
+Vale ressaltar que a versão do Next.js escolhida para o projeto foi a versão 14, com a pasta app e utilizando o princípios de páginas SSR. Alguns dos componentes precisaram ser CSR para garintir a interação do usuário.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🧪 Testes
 
-## Learn More
+Foram criados testes para garantir que a interface do usuário funcione conforme o esperado, garantindo qualidade e estabilidade da aplicação.
+O Cypress é uma ferramenta de teste de front-end focada em Testes End-to-End (E2E).
 
-To learn more about Next.js, take a look at the following resources:
+Para rodar os testes, rode o seguinte comando
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+  npx cypress open
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🛠 Tecnologias e funcionalidades
+- Next.js
+- Typescript
+- Tailwind.css
+- Cypress
+- Nodemailer
